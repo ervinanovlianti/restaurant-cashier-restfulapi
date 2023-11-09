@@ -34,6 +34,5 @@ db.once('open', async function () {
     {
         console.error('Gagal menyimpan item menu:', err);
     }
-
     mongoose.connection.close();
 });

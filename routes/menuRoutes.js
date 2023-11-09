@@ -3,7 +3,7 @@ const router = express.Router();
 const menuController = require('../controller/menuController');
 
 // Rute untuk menampilkan menu
-router.get('/menu', menuController.getMenu);
-router.post('/menu', menuController.addMenuItem);
+router.get('/menus', menuController.getMenu);
+router.post('/menus', menuController.addMenuItem);
 
 module.exports = router;

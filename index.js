@@ -4,7 +4,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 const menuRoutes = require('./routes/menuRoutes');
-const kasirRoutes = require('./routes/kasirRoutes');
+const orderRoutes = require('./routes/orderRoutes');
 
 mongoose.connect('mongodb://0.0.0.0:27017/restaurant_db', {
     useNewUrlParser: true,
@@ -26,7 +26,7 @@ app.post('/api', (req, res) => {
 });
 
 app.use('/api', menuRoutes);
-app.use('/api', kasirRoutes);
+app.use('/api', orderRoutes);
 
 const server = app.listen(PORT, () => {
     console.log(`Server berjalan di port ${PORT}`);
